@@ -1,19 +1,10 @@
-import logo from './assets/images/app-icon.svg';
-import './styles/pathfinding.css'
-
+import PathfindingVisualizer from "./pathfindingvisualizer/PathfindingVisualizer.jsx";
 
 function App() {
   return (
-    <div className="parent">
-      <div class="logo-container">
-        <div id="logo">
-          <img class="app-icon" src={logo} />
-        </div>
-        <div class="app-name">
-          <span >Pathfinding Visualizer</span>
-        </div>
-      </div>
-    </div>
+    <>
+      <PathfindingVisualizer></PathfindingVisualizer>
+    </>
   );
 }
 
