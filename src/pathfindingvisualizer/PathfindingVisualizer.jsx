@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./PathfindingVisualizer.css";
-import logo from "../assets/images/app-icon.svg";
+import Logo from "./support/Logo.js"
 
 
 export default class PathfindingVisualizer extends Component {
@@ -13,16 +13,9 @@ export default class PathfindingVisualizer extends Component {
 
     render() {
         return (
-            <div className="parent">
-                <div class="logo-container">
-                    <div id="logo">
-                        <img class="app-icon" src={logo} />
-                    </div>
-                    <div class="app-name">
-                        <span >Pathfinding Visualizer</span>
-                    </div>
-                </div>
-            </div>
+            <>
+                <Logo/>
+            </>
         );
     }
 }
