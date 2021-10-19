@@ -1,177 +1,144 @@
+:root {
+  --background_color_one: #E5E5E5;
+  --background_color_two: #FFFFFF;
+  --text_color_one: #2a0079;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
-  background-color: #E5E5E5;
-  margin: 0;
+  background-color: var(--background_color_one);
+  margin: 0 auto;
 }
 
-#root {
+.wrapper {
   width: 100%;
   max-width: 90rem;
-  background-color: #FFFFFF;
+  background-color: var(--background_color_two);
   margin: 0 auto;
   min-height: 45rem;
 }
 
-div.logo-container {
-  position: relative;
-  left: 8px;
-  top: 8px
+.header {
+  min-height: 3.4rem;
+  padding: 8px;
 }
 
-div#logo {
-  position: absolute;
-  left: 0px;
-  top: 8px;
+.inner {
+  width: 100%;
+  max-width: 73.125rem;
+  margin: 0 auto;
+  height: inherit;
 }
 
-img.app-icon {
+.inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: initial;
+  flex-direction: row;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  min-width: 25%;
+}
+.empty-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.flex-item {
+  margin-left: 8px;
+}
+
+.app-icon img {
   width: 24px;
 }
 
-div.app-name {
-  margin-left: 32px;
-  width: 8rem;
+.app-name {
+  max-width: 8rem;
 }
 
-div.app-name>span {
+.app-name>span {
   font-family: Comic Sans MS;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  color: #000000;
+  color: var(--text_color_one);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-div.menuGroup {
-  /* Top Menu Group */
-  /* Auto Layout */
+span#app-name {
+  font-weight: medium;
+  color: var(--text_color_one);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu-container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 0px;
-  position: absolute;
-  width: 1151px;
-  height: 30px;
-  left: 240px;
-  top: 53px;
-  mix-blend-mode: normal;
+  min-width: 65%;
 }
 
-div.menu {
-  /*menu frame*/
-  position: static;
-  width: 1151px;
-  height: 35px;
-  left: 0px;
-  top: 0px;
-  /* inside layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 20px;
-}
-
-div.dropdown {
-  /* Dropdown Frame */
-  position: absolute;
-  width: 538px;
-  height: 56px;
-  left: 472px;
-  top: -25px;
-}
-
-#algorithmDpdn {
-  /* Algorithm Dropdown */
-  /* Auto Layout */
+.settings-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 4px 10px;
-  position: absolute;
-  width: 264px;
-  height: 44px;
-  left: -31px;
-  top: 12px;
-  background: #FFFFFF;
-}
-
-#algorithmDpdnGroup {
-  position: static;
-  width: 244px;
-  height: 36px;
-  left: 10px;
-  top: 4px;
-  /* Inside Auto Layout */
+  align-items: center;
+  justify-content: flex-end;
   flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 1;
-  margin: 0px 0px;
+  padding: 0px;
+  min-width: 10%;
 }
 
-#algorithmDpdnIcon {
-  /* Dropdown Icon */
-  position: absolute;
-  width: 30.65px;
-  height: 16.36px;
-  right: 17.74px;
-  top: calc(50% - 16.36px/2 + 16.36px);
-  background: #2AAFFF;
-  transform: rotate(-180deg);
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 81px;
 }
 
-#algorithmDpdnTxt {
-  /* Dropdown */
-  position: absolute;
-  width: 244px;
-  height: 36px;
-  left: calc(50% - 244px/2);
-  top: calc(50% - 36px/2);
+.dropdown-name span {
   font-family: Actor;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
   text-align: center;
-  color: #000000;
+  color: var(--text_color_one);
 }
 
-/* .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .App-link {
-    color: #61dafb;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  } */
+.settings-nav {
+  margin-left: -6px;
+}
+
+.dropdown-icon {
+  padding-top: 8px;
+}
+
+.dropdown-icon img {
+  width: 25px;
+  height: 15px;
+}
+
+/* .settings-icon {
+  margin-left: 40px;
+  padding-top: 4px;
+} */
+.settings-icon img {
+  width: 35px;
+  height: 24px;
+}
+
+.separator {
+  background-color: var(--background_color_one);
+  min-height: 8px;;
+}
