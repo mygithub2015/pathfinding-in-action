@@ -15,7 +15,7 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 90rem;
+  /* max-width: 90rem; */
   background-color: var(--background_color_two);
   margin: 0 auto;
   min-height: 45rem;
@@ -28,7 +28,7 @@ body {
 
 .inner {
   width: 100%;
-  max-width: 73.125rem;
+  /* max-width: 73.125rem; */
   margin: 0 auto;
   height: inherit;
 }
@@ -48,6 +48,7 @@ body {
   flex-direction: row;
   min-width: 25%;
 }
+
 .empty-container {
   display: flex;
   align-items: center;
@@ -133,6 +134,7 @@ span#app-name {
   margin-left: 40px;
   padding-top: 4px;
 } */
+
 .settings-icon img {
   width: 35px;
   height: 24px;
@@ -140,5 +142,90 @@ span#app-name {
 
 .separator {
   background-color: var(--background_color_one);
-  min-height: 8px;;
+  min-height: 8px;
+  ;
+}
+
+.node-section {
+  min-width: 20%;
+  text-align: center;
+}
+
+.grid-section {
+  max-width: 80%;
+}
+
+.button-section {
+  min-width: 5%;
+}
+
+.btn-visualize-container {
+  margin-left: 30px;
+}
+
+.btn-visualize {
+  color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a53be;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: 1.3rem;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.2;
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+td.grid-cell {
+  border: 1px solid #5bc9b1;
+  width: 25px;
+  height: 25px;
+}
+
+tr.grid-row {
+  display: table-row;
+  vertical-align: inherit;
+  border: 1px solid #5bc9b1;
+}
+
+table {
+  /*position: relative;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); */
+  max-width: inherit;
+}
+.footer {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+.result {
+  margin-left: 16px;
+}
+.node_start {
+  /* background: url("../assets/space-ship.svg"); */
+  background-size: cover;
+}
+
+.node_end {
+  /* background: url("../assets/planet.svg"); */
+  background-size: cover;
+}
+
+.node_wall {
+  /* background: url("../assets/asteroid.svg"); */
+  animation: pulse 0.5s 1;
+  background-color: #202220;
+  border: 1px solid #202220;
 }

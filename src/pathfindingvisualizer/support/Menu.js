@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
 import logo from "../../assets/images/app-icon.svg";
 import settings from "../../assets/images/settings-icon.svg";
-
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 class Menu extends Component {
@@ -10,11 +9,13 @@ class Menu extends Component {
         this.state = {
             algorithm: "Algorithms",
             maze: "Mazes & Patterns",
-            clear: "Clear"
+            clear: "Clear",
+            speed: "Speed"
         }
         this.selectAlgorithm = this.selectAlgorithm.bind(this);
         this.selectMaze = this.selectMaze.bind(this);
         this.clearBoard = this.clearBoard.bind(this);
+        this.adaptSpeed = this.adaptSpeed.bind(this);
 
 
     }
@@ -30,6 +31,11 @@ class Menu extends Component {
     clearBoard = (e) => {
         console.log('selected clear option: ', e);
         this.setState({ clear: e });
+    }
+
+    adaptSpeed = (e) => {
+        console.log('selected speed option: ', e);
+        this.setState({ speed: e });
     }
 
     render() {
@@ -73,6 +79,17 @@ class Menu extends Component {
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item eventKey="Clear">Reset</NavDropdown.Item>
                                 </NavDropdown>
+                                <NavDropdown title={this.state.speed} id="collasible-nav-dropdown" onSelect={this.adaptSpeed}>
+                                    <NavDropdown.Item eventKey="Fast">Fast</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="Normal">Normal</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="Slow">Slow</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item eventKey="Speed">Reset</NavDropdown.Item>
+                                </NavDropdown>
+                                <Nav.Item>
+                                    <div className="btn-visualize-container">
+                                        <button  className="btn-visualize" >Visualize {this.state.algorithm}!</button>                                  </div>
+                                </Nav.Item>
                             </Nav>
                             <Nav className="settings-nav">
                                 <Nav.Item>
