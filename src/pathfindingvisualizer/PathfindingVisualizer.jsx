@@ -3,7 +3,16 @@ import "./PathfindingVisualizer.css";
 import Menu from "./support/Menu.js";
 import Node from "./support/Node.js";
 import { Button } from "react-bootstrap"
-
+import logo from "../assets/images/app-icon.svg";
+import startnode from "../assets/images/start-node.svg";
+import targetnode from "../assets/images/target-node.svg";
+import bombnode from "../assets/images/bomb-node.svg";
+import weightnode from "../assets/images/weight-node.svg";
+import wallnode from "../assets/images/wall-node.svg";
+import unvisitednode from "../assets/images/unvisited-node.svg";
+import visitednodeyellow from "../assets/images/visited-node-yellow.svg";
+import visitednodered from "../assets/images/visited-node-red.svg";
+import shortestpath from "../assets/images/shortest-path.svg";
 
 export default class PathfindingVisualizer extends Component {
     constructor(props) {
@@ -151,8 +160,76 @@ export default class PathfindingVisualizer extends Component {
                     <Menu></Menu>
 
                     <div className="inner-header">
-                        <div className="node-section flex-itme">
-                            <marquee><h2>Nodes Section</h2></marquee>
+                        <div className="node-section">
+                            <div className="desc-icon-container">
+                                <div id="logo">
+                                    <img className="app-icon" src={startnode} width="24px"/>
+                                </div>
+                                <div className="desc-icon-text">
+                                    <span>Start Node</span>
+                                </div>
+                            </div>
+                            <div className="desc-icon-container">
+                                <div id="logo">
+                                    <img className="app-icon" src={targetnode} width="24px"/>
+                                </div>
+                                <div className="desc-icon-text">
+                                    <span>Target Node</span>
+                                </div> 
+                            </div>
+                            <div className="desc-icon-container">
+                                <div id="logo">
+                                    <img className="app-icon" src={bombnode} width="24px"/>
+                                </div>
+                                <div className="desc-icon-text">
+                                    <span>Bomb Node</span>
+                                </div>
+                            </div>
+                            <div className="desc-icon-container">
+                                <div id="logo">
+                                    <img className="app-icon" src={weightnode} width="24px"/>
+                                </div>
+                                <div className="desc-icon-text">
+                                    <span>Weight Node</span>
+                                </div>
+                            </div>
+                            <div className="desc-icon-container">
+                                <div id="logo">
+                                    <img className="app-icon" src={wallnode} width="24px"/>
+                                </div>
+                                <div className="desc-icon-text">
+                                    <span>Wall Node</span>
+                                </div>
+                            </div>
+                            <div className="desc-icon-container">
+                                <div id="logo">
+                                    <img className="app-icon" src={unvisitednode} width="24px"/>
+                                </div>
+                                <div className="desc-icon-text">
+                                    <span>Unvisited Node</span>
+                                </div>
+                            </div>
+                            <div className="desc-icon-container">
+                                <div className="visited-icons">
+                                    <div id="logo">
+                                        <img className="app-icon" src={visitednodeyellow} width="24px"/>
+                                    </div>
+                                    <div id="logo">
+                                        <img className="app-icon" src={visitednodered} width="24px"/>
+                                    </div>
+                                </div>                                
+                                <div className="visited-node-text">
+                                    <span>Visited Node</span>
+                                </div>
+                            </div>
+                            <div className="desc-icon-container">
+                                <div id="logo">
+                                    <img className="app-icon" src={shortestpath} width="24px"/>
+                                </div>
+                                <div className="desc-icon-text">
+                                    <span>Shortest-Path Node</span>
+                                </div>
+                            </div>
                         </div>
                         <div className="grid-section flex-item">
                             <table className="grid-table">
