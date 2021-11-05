@@ -173,75 +173,76 @@ export default class PathfindingVisualizer extends Component {
             <>
                 <div className="wrapper">
                     <Menu></Menu>
-
                     <div className="inner-header">
                         <div className="node-section">
-                            <div className="desc-icon-container">
-                                <div id="logo">
-                                    <img className="app-icon" src={startnode} width="24px" />
+                            <div className="node-info-container">
+                                <div className="node-icon">
+                                    <object data={startnode} type="image/svg+xml" />
                                 </div>
-                                <div className="desc-icon-text">
+                                <div className="node-text">
                                     <span>Start Node</span>
                                 </div>
                             </div>
-                            <div className="desc-icon-container">
-                                <div id="logo">
-                                    <img className="app-icon" src={targetnode} width="24px" />
+                            <div className="node-info-container">
+                                <div className="node-icon">
+                                    <object data={targetnode} type="image/svg+xml" />
                                 </div>
-                                <div className="desc-icon-text">
+                                <div className="node-text">
                                     <span>Target Node</span>
                                 </div>
                             </div>
-                            <div className="desc-icon-container">
-                                <div id="logo">
-                                    <img className="app-icon" src={bombnode} width="24px" />
+                            <div className="node-info-container">
+                                <div className="node-icon">
+                                    <object data={bombnode} type="image/svg+xml" />
                                 </div>
-                                <div className="desc-icon-text">
+                                <div className="node-text">
                                     <span>Bomb Node</span>
                                 </div>
                             </div>
-                            <div className="desc-icon-container">
-                                <div id="logo">
-                                    <img className="app-icon" src={weightnode} width="24px" />
+                            <div className="node-info-container">
+                                <div className="node-icon">
+                                    <object data={weightnode} type="image/svg+xml" />
                                 </div>
-                                <div className="desc-icon-text">
+                                <div className="node-text">
                                     <span>Weight Node</span>
                                 </div>
                             </div>
-                            <div className="desc-icon-container">
-                                <div id="logo">
-                                    <img className="app-icon" src={wallnode} width="24px" />
+                            <div className="node-info-container">
+                                <div className="node-icon">
+                                    <object data={wallnode} type="image/svg+xml" />
                                 </div>
-                                <div className="desc-icon-text">
+                                <div className="node-text flex-item">
                                     <span>Wall Node</span>
                                 </div>
                             </div>
-                            <div className="desc-icon-container">
-                                <div id="logo">
-                                    <img className="app-icon" src={unvisitednode} width="24px" />
+                            <div className="node-info-container">
+                                <div className="node-icon">
+                                    <object data={unvisitednode} type="image/svg+xml" />
                                 </div>
-                                <div className="desc-icon-text">
+                                <div className="node-text">
                                     <span>Unvisited Node</span>
                                 </div>
                             </div>
-                            <div className="desc-icon-container">
-                                <div className="visited-icons">
-                                    <div id="logo">
-                                        <img className="app-icon" src={visitednodeyellow} width="24px" />
-                                    </div>
-                                    <div id="logo">
-                                        <img className="app-icon" src={visitednodered} width="24px" />
+                            <div className="node-info-container">
+                                <div className="node-icon">
+                                    <div className="vertical-node">
+                                        <div>
+                                            <object data={visitednodeyellow} type="image/svg+xml" />
+                                        </div>
+                                        <div>
+                                            <object data={visitednodered} type="image/svg+xml" />
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="visited-node-text">
+                                <div className="node-text">
                                     <span>Visited Node</span>
                                 </div>
                             </div>
-                            <div className="desc-icon-container">
-                                <div id="logo">
-                                    <img className="app-icon" src={shortestpath} width="24px" />
+                            <div className="node-info-container">
+                                <div className="node-icon">
+                                    <object data={shortestpath} type="image/svg+xml" />
                                 </div>
-                                <div className="desc-icon-text">
+                                <div className="node-text">
                                     <span>Shortest-Path Node</span>
                                 </div>
                             </div>
@@ -284,8 +285,8 @@ export default class PathfindingVisualizer extends Component {
                         </div>
                     </div>
                     <footer>
-                        <div className="footer">
-                            <div className="footer">
+                        <div className="footer-section">
+                            <div className="footer-container">
                                 <Button variant="info">Tutorial</Button>
                                 <Button className="result" variant="info">Visualization!</Button>
                             </div>
