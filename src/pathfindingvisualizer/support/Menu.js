@@ -88,7 +88,7 @@ class Menu extends Component {
                                 </NavDropdown>
                                 <Nav.Item>
                                     <div className="btn-visualize-container">
-                                        <button  className="btn-visualize" >Visualize {this.state.algorithm}!</button>                                  </div>
+                                        <button  className="btn-visualize"> Visualize {this.state.algorithm}!</button>                                  </div>
                                 </Nav.Item>
                             </Nav>
                             <Nav className="settings-nav">

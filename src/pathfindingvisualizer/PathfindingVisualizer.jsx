@@ -3,18 +3,10 @@ import "./PathfindingVisualizer.css";
 import Menu from "./support/Menu.js";
 import Node from "./support/Node.js";
 import { Button } from "react-bootstrap"
-import logo from "../assets/images/app-icon.svg";
-import startnode from "../assets/images/start-node.svg";
-import targetnode from "../assets/images/target-node.svg";
-import bombnode from "../assets/images/bomb-node.svg";
-import weightnode from "../assets/images/weight-node.svg";
-import wallnode from "../assets/images/wall-node.svg";
-import unvisitednode from "../assets/images/unvisited-node.svg";
-import visitednodeyellow from "../assets/images/visited-node-yellow.svg";
-import visitednodered from "../assets/images/visited-node-red.svg";
-import shortestpath from "../assets/images/shortest-path.svg";
-
-
+import startNode from "../assets/images/nodes/start.svg";
+import targetNode from "../assets/images/nodes/target.svg";
+import bombNode from "../assets/images/nodes/bomb.svg";
+import weightNode from "../assets/images/nodes/weight.svg";
 
 export default class PathfindingVisualizer extends Component {
     constructor(props) {
@@ -177,7 +169,7 @@ export default class PathfindingVisualizer extends Component {
                         <div className="node-section">
                             <div className="node-info-container">
                                 <div className="node-icon">
-                                    <object data={startnode} type="image/svg+xml" />
+                                    <object data={startNode} type="image/svg+xml" />
                                 </div>
                                 <div className="node-text">
                                     <span>Start Node</span>
@@ -185,7 +177,7 @@ export default class PathfindingVisualizer extends Component {
                             </div>
                             <div className="node-info-container">
                                 <div className="node-icon">
-                                    <object data={targetnode} type="image/svg+xml" />
+                                    <object data={targetNode} type="image/svg+xml" />
                                 </div>
                                 <div className="node-text">
                                     <span>Target Node</span>
@@ -193,7 +185,7 @@ export default class PathfindingVisualizer extends Component {
                             </div>
                             <div className="node-info-container">
                                 <div className="node-icon">
-                                    <object data={bombnode} type="image/svg+xml" />
+                                    <object data={bombNode} type="image/svg+xml" />
                                 </div>
                                 <div className="node-text">
                                     <span>Bomb Node</span>
@@ -201,7 +193,7 @@ export default class PathfindingVisualizer extends Component {
                             </div>
                             <div className="node-info-container">
                                 <div className="node-icon">
-                                    <object data={weightnode} type="image/svg+xml" />
+                                    <object data={weightNode} type="image/svg+xml" />
                                 </div>
                                 <div className="node-text">
                                     <span>Weight Node</span>
@@ -209,7 +201,7 @@ export default class PathfindingVisualizer extends Component {
                             </div>
                             <div className="node-info-container">
                                 <div className="node-icon">
-                                    <object data={wallnode} type="image/svg+xml" />
+                                    <div className="wall-node"></div>
                                 </div>
                                 <div className="node-text flex-item">
                                     <span>Wall Node</span>
@@ -217,7 +209,7 @@ export default class PathfindingVisualizer extends Component {
                             </div>
                             <div className="node-info-container">
                                 <div className="node-icon">
-                                    <object data={unvisitednode} type="image/svg+xml" />
+                                    <div className="unvisited-node"></div>
                                 </div>
                                 <div className="node-text">
                                     <span>Unvisited Node</span>
@@ -226,12 +218,8 @@ export default class PathfindingVisualizer extends Component {
                             <div className="node-info-container">
                                 <div className="node-icon">
                                     <div className="vertical-node">
-                                        <div>
-                                            <object data={visitednodeyellow} type="image/svg+xml" />
-                                        </div>
-                                        <div>
-                                            <object data={visitednodered} type="image/svg+xml" />
-                                        </div>
+                                        <div className="visited-node-yellow"></div>
+                                        <div className="visited-node-red"></div>
                                     </div>
                                 </div>
                                 <div className="node-text">
@@ -240,7 +228,7 @@ export default class PathfindingVisualizer extends Component {
                             </div>
                             <div className="node-info-container">
                                 <div className="node-icon">
-                                    <object data={shortestpath} type="image/svg+xml" />
+                                    <div className="shortest-path-node"></div>
                                 </div>
                                 <div className="node-text">
                                     <span>Shortest-Path Node</span>

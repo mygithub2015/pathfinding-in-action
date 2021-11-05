@@ -5,6 +5,11 @@
   --border_color_one: #0a53be;
   --border_color_two: #57CCF3;
   --text_color_one: #2a0079;
+  --wall_node_color: #202220;
+  --visited_node_color_1: #FEBD33;
+  --visited_node_color_2: #FA667E;
+  --shortest_path_node_color: #8DC63F;
+
 }
 
 html, body {
@@ -179,6 +184,60 @@ span#app-name {
   min-width: inherit;
   margin-top: 20px;
 }
+.wall-node {
+  height: 22px;
+  width: 22px;
+  display: block;
+  background-color: var(--wall_node_color);
+  /* animation-name: wallAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running; */
+}
+
+.unvisited-node {
+  height: 22px;
+  width: 22px;
+  display: block;
+  border: 1px solid #000000;
+  background-color: white;
+}
+
+.vertical-node {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.visited-node-yellow {
+  height: 22px;
+  width: 22px;
+  display: block;
+  border: 1px solid #000000;
+  background-color: var(--visited_node_color_1);
+}
+
+.visited-node-red {
+  height: 22px;
+  width: 22px;
+  display: block;
+  border: 1px solid #000000;
+  background-color: var(--visited_node_color_2);
+  margin-top: 4px;
+}
+
+.shortest-path-node {
+  height: 22px;
+  width: 22px;
+  display: block;
+  border: 1px solid #000000;
+  background-color: var(--shortest_path_node_color);
+}
 
 .node-text {
   margin-left: 16px;
@@ -190,12 +249,7 @@ span#app-name {
   color: #000000;
 }
 
-.vertical-node {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .grid-section {
   max-width: 90%;
@@ -260,8 +314,7 @@ table {
 }
 
 .node_start {
-  background: url("../assets/images/start-node.svg");
-  /* background: url("../assets/images/right-arrow.svg"); */
+  background: url("../assets/images/nodes/start.svg");
   background-size: cover;
 }
 
@@ -271,14 +324,12 @@ table {
 }
 
 .node_end {
-  background: url("../assets/images/target-node.svg");
-  /* background: url("../assets/images/circle-target.svg"); */
+  background: url("../assets/images/nodes/target.svg");
   background-size: cover;
 }
 
 .node_wall {
-  /* background: url("../assets/asteroid.svg"); */
   animation: pulse 0.5s 1;
-  background-color: #202220;
-  border: 1px solid #202220;
+  background-color: var(--wall_node_color);
+  border: 1px solid var(--wall_node_color);
 }
