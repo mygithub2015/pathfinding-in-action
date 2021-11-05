@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import logo from "../../assets/images/app-icon.svg";
 import settings from "../../assets/images/settings-icon.svg";
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
