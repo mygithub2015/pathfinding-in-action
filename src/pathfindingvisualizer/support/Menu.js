@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import logo from "../../assets/images/app-icon.svg";
 import settings from "../../assets/images/settings-icon.svg";
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
@@ -88,7 +88,7 @@ class Menu extends Component {
                                 </NavDropdown>
                                 <Nav.Item>
                                     <div className="btn-visualize-container">
-                                        <button  className="btn-visualize" >Visualize {this.state.algorithm}!</button>                                  </div>
+                                        <button  className="btn-visualize"> Visualize {this.state.algorithm}!</button>                                  </div>
                                 </Nav.Item>
                             </Nav>
                             <Nav className="settings-nav">
