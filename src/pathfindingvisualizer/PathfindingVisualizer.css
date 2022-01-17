@@ -1,18 +1,18 @@
 :root {
-  --background_color_one: #E5E5E5;
-  --background_color_two: #FFFFFF;
+  --background_color_one: #e5e5e5;
+  --background_color_two: #ffffff;
   --background_color_three: #0a58ca;
   --border_color_one: #0a53be;
-  --border_color_two: #57CCF3;
+  --border_color_two: #57ccf3;
   --text_color_one: #2a0079;
   --wall_node_color: #202220;
-  --visited_node_color_1: #FEBD33;
-  --visited_node_color_2: #FA667E;
-  --shortest_path_node_color: #8DC63F;
-
+  --visited_node_color_1: rgba(0, 217, 159, 0.75);
+  --visited_node_color_2: rgba(0, 190, 218, 0.75);
+  --shortest_path_node_color: #8dc63f;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -74,7 +74,6 @@ div.visited-node-text {
   flex-direction: row;
   min-width: 25%;
 }
-
 .empty-container {
   display: flex;
   align-items: center;
@@ -168,13 +167,12 @@ span#app-name {
 .separator {
   background-color: var(--background_color_one);
   min-height: 8px;
-  ;
 }
 
 .node-section {
   margin-left: 32px;
   min-width: 10%;
-  margin-top:32px;
+  margin-top: 32px;
 }
 
 .node-info-container {
@@ -249,8 +247,6 @@ span#app-name {
   color: #000000;
 }
 
-
-
 .grid-section {
   max-width: 90%;
 }
@@ -268,7 +264,7 @@ span#app-name {
   background-color: var(--background_color_three);
   border-color: var(--border_color_one);
   cursor: pointer;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 1.3rem;
   display: inline-block;
   font-weight: 400;
@@ -281,7 +277,8 @@ span#app-name {
   cursor: pointer;
   user-select: none;
   border: 1px solid transparent;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 td.grid-cell {
@@ -306,30 +303,9 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .result {
   margin-left: 16px;
-}
-
-.node_start {
-  background: url("../assets/images/nodes/start.svg");
-  background-size: cover;
-}
-
-.start-node img {
-  height: 22px;
-  width: 22px;
-}
-
-.node_end {
-  background: url("../assets/images/nodes/target.svg");
-  background-size: cover;
-}
-
-.node_wall {
-  animation: pulse 0.5s 1;
-  background-color: var(--wall_node_color);
-  border: 1px solid var(--wall_node_color);
 }

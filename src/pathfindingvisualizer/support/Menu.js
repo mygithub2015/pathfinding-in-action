@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "../../assets/images/app-icon.svg";
 import settings from "../../assets/images/settings-icon.svg";
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { visualizeDijkstra } from "../PathfindingVisualizer.jsx";
 
 class Menu extends Component {
     constructor(props) {
@@ -38,6 +39,10 @@ class Menu extends Component {
         this.setState({ speed: e });
     }
 
+    visualizeAlgorithm = () => {
+        this.props.onClick();
+    }
+
     render() {
         return (
             <>
@@ -54,11 +59,11 @@ class Menu extends Component {
                                     <Nav.Link target="new" href="https://github.com/mygithub2015/pathfinding-in-action">GitHub</Nav.Link>
                                 </Nav.Item>
                                 <NavDropdown title={this.state.algorithm} id="collasible-nav-dropdown" onSelect={this.selectAlgorithm}  >
-                                    <NavDropdown.Item eventKey="Dijkstra's Algorithm">Dijkstra's Algorithm</NavDropdown.Item>
-                                    <NavDropdown.Item eventKey="A* Search">A* Search</NavDropdown.Item>
-                                    <NavDropdown.Item eventKey="Gready Best-first Search">Gready Best-first Search</NavDropdown.Item>
-                                    <NavDropdown.Item eventKey="Breadth-first Search">Breadth-first Search</NavDropdown.Item>
-                                    <NavDropdown.Item eventKey="Depth-first Search">Depth-first Search</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="Dijkstra">Dijkstra's Algorithm</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="A*">A* Search</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="Greedy BFS">Gready Best-first Search</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="BFS">Breadth-first Search</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="DFS">Depth-first Search</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item eventKey="Algorithms">Reset</NavDropdown.Item>
                                 </NavDropdown>
@@ -88,7 +93,7 @@ class Menu extends Component {
                                 </NavDropdown>
                                 <Nav.Item>
                                     <div className="btn-visualize-container">
-                                        <button  className="btn-visualize"> Visualize {this.state.algorithm}!</button>                                  </div>
+                                        <button  className="btn-visualize" onClick={this.visualizeAlgorithm}> Visualize {this.state.algorithm}!</button>                                  </div>
                                 </Nav.Item>
                             </Nav>
                             <Nav className="settings-nav">
