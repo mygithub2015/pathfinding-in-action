@@ -97,6 +97,7 @@ export default class PathfindingVisualizer extends Component {
     }
   };
   handleMouseDown = (row, col) => {
+    console.log("mouse down event");
     if (this.animating) return;
     let arr = this.state.grid;
     if (arr[row][col].isStart) {
@@ -110,9 +111,13 @@ export default class PathfindingVisualizer extends Component {
         mainClicked: "end",
       });
     }
-    if (!arr[row][col].isWall && !arr[row][col].isStart && !arr[row][col].isEnd)
+    if (
+      !arr[row][col].isWall &&
+      !arr[row][col].isStart &&
+      !arr[row][col].isEnd
+    ) {
       arr[row][col].isWall = true;
-    else if (arr[row][col].isWall) {
+    } else if (arr[row][col].isWall) {
       arr[row][col].isWall = false;
     }
     this.setState({
@@ -121,17 +126,22 @@ export default class PathfindingVisualizer extends Component {
     });
   };
   handleMouseEnter = (row, col) => {
+    console.log("mouse enter event");
     if (this.animating) return;
     if (this.state.mouseClicked) {
       let arr = this.state.grid;
       if (this.state.mainClicked === "start") {
         arr[row][col].isStart = true;
         this.setState({
+          startX: row,
+          startY: col,
           start_node: [row, col],
         });
       } else if (this.state.mainClicked === "end") {
         arr[row][col].isEnd = true;
         this.setState({
+          endX: row,
+          endY: col,
           end_node: [row, col],
         });
       } else if (
