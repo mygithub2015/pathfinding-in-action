@@ -9,13 +9,14 @@ import startNode from "../assets/images/nodes/start.svg";
 import targetNode from "../assets/images/nodes/target.svg";
 import bombNode from "../assets/images/nodes/bomb.svg";
 import weightNode from "../assets/images/nodes/weight.svg";
+import * as Constants from "./support/constants";
 
-const DIJKSTRA = "Dijkstra";
 export default class PathfindingVisualizer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       grid: [],
+      initGrid: [],
       startX: 0,
       startY: 0,
       endX: 0,
@@ -231,13 +232,45 @@ export default class PathfindingVisualizer extends Component {
     return newClassName;
   };
 
+  clear(type) {
+    console.log("in clear");
+    switch (type) {
+      case Constants.CLEAR_PATH:
+        this.clearPath();
+        break;
+      case Constants.CLEAR_BOARD:
+        this.clearBoard();
+        break;
+      case Constants.CLEAR_WALLS_WEIGHTS:
+        this.clearWallsAndWeights();
+
+      default:
+        break;
+    }
+  }
+  clearPath() {
+    console.log("inside clear path");
+    this.makeGrid();
+  }
+
+  clearBoard() {
+    console.log("inside clear board");
+  }
+
+  clearWallsAndWeights() {
+    console.log("inside clear walls & weights");
+  }
+
   visualize(algorithm) {
+    console.log("coning into pathfinding visualize");
     switch (algorithm) {
-      case DIJKSTRA:
+      case Constants.DIJKSTRA:
         this.visualizeDijkstra();
         break;
       default:
-        this.animateDijkstra();
+        window.alert(
+          algorithm + "not implemented yet, please select any other algorithm"
+        );
     }
   }
   visualizeDijkstra() {
@@ -253,7 +286,10 @@ export default class PathfindingVisualizer extends Component {
     return (
       <>
         <div className="wrapper">
-          <Menu onClick={() => this.visualizeDijkstra()} />
+          <Menu
+            onClear={(type) => this.clear(type)}
+            onClick={(algo) => this.visualize(algo)}
+          />
           <div className="inner-header">
             <div className="node-section">
               <div className="node-info-container">
